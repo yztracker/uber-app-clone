@@ -16,6 +16,7 @@ import { useDispatch } from "react-redux";
 import { setDestination } from "../slices/navSlice";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { useNavigation } from "@react-navigation/core";
+import NavFavorite from "./NavFavorite";
 
 const NavigateCard = () => {
   const dispatch = useDispatch();
@@ -25,11 +26,9 @@ const NavigateCard = () => {
     <SafeAreaView style={tw`bg-white flex-1`}>
       <Text style={tw`text-center py-5 text-xl`}>Card</Text>
 
-      <KeyboardAvoidingView
-        behavior={Platform.OS === "ios" ? "padding" : "height"}
+      <View
         style={tw`border-t border-gray-200 flex-shrink`}
       >
-        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
           <GooglePlacesAutocomplete
             showSoftInputOnFocus={false}
             placeholder="Where to ? "
@@ -56,8 +55,9 @@ const NavigateCard = () => {
               navigation.navigate("RideOptionsCard");
             }}
           />
-        </TouchableWithoutFeedback>
-      </KeyboardAvoidingView>
+
+        <NavFavorite/>
+      </View>
     </SafeAreaView>
   );
 };
