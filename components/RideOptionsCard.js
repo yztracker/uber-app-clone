@@ -71,7 +71,7 @@ const RideOptionsCard = () => {
                     style:"currency",
                     currency:"USD"
                 }).format(
-                    (travelTimeInformation?.duration.value * multiplier)/100
+                    (travelTimeInformation?.duration?.value * multiplier)/100
                 )}
                 </Text>
             </TouchableOpacity>

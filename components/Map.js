@@ -7,7 +7,6 @@ import { selectDestination, selectOrigin, setTravelTimeInformation } from "../sl
 import MapViewDirections from 'react-native-maps-directions';
 import {GOOGLE_MAPS_APIKEY} from '@env';
 const Map = () => {
-
     const origin = useSelector(selectOrigin);
     const destination = useSelector(selectDestination);
     const mapRef = useRef(null);

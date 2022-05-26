@@ -21,10 +21,9 @@ import NavFavorite from "./NavFavorite";
 const NavigateCard = () => {
   const dispatch = useDispatch();
   const navigation = useNavigation();
-
   return (
     <SafeAreaView style={tw`bg-white flex-1`}>
-      <Text style={tw`text-center py-5 text-xl`}>Card</Text>
+      <Text style={tw`text-center py-5 text-xl`}>Destination Search</Text>
 
       <View
         style={tw`border-t border-gray-200 flex-shrink`}
